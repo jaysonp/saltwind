@@ -199,7 +199,7 @@ input {
 /* HEADER SECTION */
 #h {
 	background: url(../img/waterway-miami.jpg) no-repeat center top;
-	padding-top: 5px;
+	padding-top: 100px;
 	background-attachment: relative;
 	background-position: center center;
 	min-height: 95%;

@@ -1,26 +1,24 @@
 <?php
 
-$Name = $_POST['Name'];
-$Email = $_POST['Email'];
-$Comment = $_POST['Comment'];
-/*Check whether the form has been submitted
-if (array_key_exists('check_submit', $_POST)) {
-	$Name = $_POST['Name'];
-	$Email = $_POST['Email'];
-	$Comment = $_POST['Comment'];
-}
+
+$Name = htmlspecialchars($_POST['Name']);
+$Email = htmlspecialchars($_POST['Email']);
+$Comment = htmlspecialchars($_POST['Comment']);
 
 
-$id = 1;
-/* Test stuff
-$name = "Jayson";
-$email = "jays@test.com";
-$comment = "testing test stuff";
-*/
 
 echo "name: $Name<br />";
 echo "email: $Email<br />";
 echo "comment: $Comment<br />";
+
+/* Test stuff
+$name = "Jayson";
+$email = "jays@test.com";
+$comment = "testing test stuff";
+
+
+
+*/
 
 //Connect to DB
 
@@ -36,8 +34,8 @@ if ($conn->connect_error) {
     die("Connection failed: " . $conn->connect_error);
 } 
 
-$sql = "INSERT INTO saltwind (id, name, email, Comment)
-VALUES ('$id', '$Name', '$Email', '$Comment')";
+$sql = "INSERT INTO saltwind (name, email, Comment)
+VALUES ('$Name', '$Email', '$Comment')";
 
 if ($conn->query($sql) === TRUE) {
     echo "New record created successfully";
@@ -45,10 +43,11 @@ if ($conn->query($sql) === TRUE) {
     echo "Error: " . $sql . "<br>" . $conn->error;
 }
 
+
 $conn->close();
 
 sleep(2);
-//echo "<meta http-equiv='refresh' content=\"5; url=/saltwind\">";
+echo "<meta http-equiv='refresh' content=\"5; url=/saltwind\">";
 
 
 ?>

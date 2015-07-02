@@ -1,9 +1,13 @@
 <?php
 
+//Check whether the form has been submitted
+if (array_key_exists('check_submit', $_POST)) {
+	$name = htmlspecialchars($_POST['name']);
+	$email = htmlspecialchars($_POST['email']);
+	$comment = htmlspecialchars($_POST['comment']);
+}
+
 $id = 1;
-$name = $_POST['name'];
-$email = $_POST['email'];
-$comment = $_POST['comment'];
 
 echo "name: $name<br />";
 echo "email: $email<br />";
@@ -24,7 +28,7 @@ if ($conn->connect_error) {
 } 
 
 $sql = "INSERT INTO saltwind (id, name, email, Comment)
-VALUES ($id, $name, $email, $comment)";
+VALUES (NULL, $name, $email, $comment)";
 
 if ($conn->query($sql) === TRUE) {
     echo "New record created successfully";
@@ -35,7 +39,7 @@ if ($conn->query($sql) === TRUE) {
 $conn->close();
 
 sleep(2);
-//echo "<meta http-equiv='refresh' content=\"0; url=http://www.convictioneliquid.info/conviction/form.php\">";
+//echo "<meta http-equiv='refresh' content=\"0; url=http://www.convictioneliquid.info\">";
 
 
 ?>

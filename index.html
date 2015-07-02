@@ -272,12 +272,12 @@
             <br>
             <form role="form">
             <div class="form-group">
-              <form action="assets/scripts/contactform.php" id="contactform" method="post" enctype="multipart/form-data" >
-                <input type="text" name="name" class="form-control" placeholder="Your Name">
-                <input type="text" name="email" class="form-control"  placeholder="Your Email">
-                <textarea name="comment" class="form-control" rows="3" placeholder="Your Message"> </textarea>
+              <form action="contactform.php" id="contactform" method="POST" enctype="multipart/form-data">
+                <input type="text" name="name" id="name" class="form-control" placeholder="Your Name">
+                <input type="text" name="email" id="email" class="form-control"  placeholder="Your Email">
+                <textarea name="comment" id="comment" class="form-control" rows="3" placeholder="Your Message">Message</textarea>
             </div>
-            <input type="submit" class="btn btn-conf btn-clear"></button>
+            <input type="submit" name="submit" value="Submit" class="btn btn-conf btn-clear"></button>
 
           </form>
           </div>
@@ -309,6 +309,7 @@
     <script src="assets/js/jquery.prettyPhoto.js"></script>
     <script src="assets/js/jquery.isotope.min.js"></script>
     <script src="assets/js/custom.js"></script>
+
 
 
     <script>
@@ -393,5 +394,8 @@
   });
 })(jQuery);
 </script>
+
+
+
   </body>
 </html>

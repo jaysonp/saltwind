@@ -1,23 +1,32 @@
 <?php
 
-//Check whether the form has been submitted
+$Name = $_POST['Name'];
+$Email = $_POST['Email'];
+$Comment = $_POST['Comment'];
+/*Check whether the form has been submitted
 if (array_key_exists('check_submit', $_POST)) {
-	$name = htmlspecialchars($_POST['name']);
-	$email = htmlspecialchars($_POST['email']);
-	$comment = htmlspecialchars($_POST['comment']);
+	$Name = $_POST['Name'];
+	$Email = $_POST['Email'];
+	$Comment = $_POST['Comment'];
 }
 
-$id = 1;
 
-echo "name: $name<br />";
-echo "email: $email<br />";
-echo "comment: $comment<br />";
+$id = 1;
+/* Test stuff
+$name = "Jayson";
+$email = "jays@test.com";
+$comment = "testing test stuff";
+*/
+
+echo "name: $Name<br />";
+echo "email: $Email<br />";
+echo "comment: $Comment<br />";
 
 //Connect to DB
 
 $servername = "localhost";
-$username = "root";
-$password = "2wsxcde3";
+$username = "";
+$password = "";
 $dbname = "contact_form";
 
 // Create connection
@@ -28,7 +37,7 @@ if ($conn->connect_error) {
 } 
 
 $sql = "INSERT INTO saltwind (id, name, email, Comment)
-VALUES (NULL, $name, $email, $comment)";
+VALUES ('$id', '$Name', '$Email', '$Comment')";
 
 if ($conn->query($sql) === TRUE) {
     echo "New record created successfully";
@@ -39,7 +48,7 @@ if ($conn->query($sql) === TRUE) {
 $conn->close();
 
 sleep(2);
-//echo "<meta http-equiv='refresh' content=\"0; url=http://www.convictioneliquid.info\">";
+//echo "<meta http-equiv='refresh' content=\"5; url=/saltwind\">";
 
 
 ?>

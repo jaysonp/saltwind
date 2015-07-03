@@ -6,7 +6,7 @@ $Email = htmlspecialchars($_POST['Email']);
 $Comment = htmlspecialchars($_POST['Comment']);
 
 
-
+/*
 echo "name: $Name<br />";
 echo "email: $Email<br />";
 echo "comment: $Comment<br />";
@@ -47,7 +47,7 @@ if ($conn->query($sql) === TRUE) {
 $conn->close();
 
 sleep(2);
-echo "<meta http-equiv='refresh' content=\"5; url=/saltwind\">";
+echo "<meta http-equiv='refresh' content=\"0; url=/saltwind\">";
 
 
 ?>

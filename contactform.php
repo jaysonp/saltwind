@@ -47,7 +47,7 @@ if ($conn->query($sql) === TRUE) {
 $conn->close();
 
 sleep(2);
-echo "<meta http-equiv='refresh' content=\"0; url=/saltwind\">";
+echo "<meta http-equiv='refresh' content=\"0; url=http://www.saltwindsolutions.com#contact\">";
 
 
 ?>

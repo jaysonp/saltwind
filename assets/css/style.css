@@ -460,7 +460,7 @@ input {
 }
 
 #new {
-	background: url(../img/flow2.png) no-repeat center top;
+	background: url(../img/flow2.jpg) no-repeat center top;
 	padding-top: 5px;
 	background-attachment: relative;
 	background-position: center center;
@@ -564,6 +564,13 @@ input {
 	letter-spacing: 2px;
 }
 
+
+
+#contform {
+	max-width: 70%;
+	padding-bottom: 25px;
+}
+
 /* FOOTER */
 #f {
 	padding-top: 20px;
@@ -580,13 +587,6 @@ input {
 
 #f a {
 	color: white;
-}
-
-
-
-#contform {
-	max-width: 70%;
-	padding-bottom: 25px;
 }
 
 
